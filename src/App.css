@@ -1,14 +1,53 @@
-.dessert-list {
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 4rem;
+    background-color: var(--color-rose-50);
+    padding: 3rem;
+  }
 
+.dessert-list {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 0.5rem;
+align-items: flex-start;
+font-size: 16px;
 }
 
 .dessert-card {
-
+    flex: 1 1 calc(33.333% - 1rem); /* 3 pro Zeile */
+    box-sizing: border-box;
 }
 
 .dessert-card img {
-
+    display: block;
+    height: auto;
+    border-radius: 0.9rem;
+    max-width: 100%; 
+    max-height: 13rem;  
 }
+
+.dessert-card img:hover {
+    border: solid 2px var(--color-red); 
+    transform: scale(1.05);
+}
+
+
+.dessert-card h3 {
+    font-size: 1.2rem; /* Kleinere Schriftgröße */
+    margin: 0.5rem 0; /* Weniger Abstand zwischen Texten */
+    font-weight: bold; /* Optional: Schriftgewicht anpassen */
+}
+
+.dessert-name {
+    font-size: 1rem; /* Kleinere Schriftgröße */
+    margin: 0.5rem 0; /* Weniger Abstand */
+}
+
+
+/*
 
 .dessert-card .dessert-name {
 
@@ -16,4 +55,10 @@
 
 .dessert-card .add-to-cart {
   
+}
+
+*/ 
+
+.dessert-category {
+    margin-bottom: 1rem;
 }

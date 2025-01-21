@@ -8,10 +8,12 @@ function App() {
 
   return (
 <>
-<header>
-  <h1>Desserts</h1>
-  </header>
+
 <main>
+<div className="container">
+  <div className="ueberschrift">
+<h1 className="desserts-h1">Desserts</h1>
+</div>
 <div className="dessert-list">
   {desserts.map((dessert, index) => (
     <DessertCard
@@ -27,6 +29,7 @@ function App() {
   <h2>Your Cart</h2>
   <p>Your added items items will appear here</p>
 </section>
+</div>
 <div className="attribution">
     Challenge by <a href="https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/lina98st">Your Name Here</a>.
