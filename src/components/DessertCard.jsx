@@ -1,6 +1,8 @@
 import React from 'react';
-import '../index.css'; 
+import '../Index.css'; 
 import '../App.css'; 
+import DessertList from './DessertList';
+
 
 const DessertCard = ({ image, name, category, price }) => {
     return (

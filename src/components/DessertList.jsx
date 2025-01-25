@@ -1,10 +1,9 @@
 import React from 'react';
 import { useState } from 'react'
-import desserts from '../data/desserts.json'; 
+import desserts from '../data.json'; //Import json data for desserts
 import DessertCard from './DessertCard';
-
-import './Index.css'
-import '../App.css'
+import '../Index.css'; 
+import '../App.css'; 
 
 const DessertList = () => (
     <div className="dessert-list">
@@ -19,3 +18,5 @@ const DessertList = () => (
         ))}
         </div>
 );
+
+export default DessertList;

@@ -1,8 +1,10 @@
-import { useState } from 'react'
-import './Index.css'
-import './App.css'
+import React from 'react';
+import './Index.css';
+import './App.css';
+import DessertList from './components/DessertList';
 import DessertCard from './components/DessertCard';
-import desserts from '../data.json'; //Import json data for desserts
+import desserts from './data.json';
+
 
 function App() {
 
@@ -10,6 +12,7 @@ function App() {
 <>
 
 <main>
+<div className="layout">
 <div className="container">
   <div className="ueberschrift">
 <h1 className="desserts-h1">Desserts</h1>
@@ -25,14 +28,17 @@ function App() {
     />
   ))}
 </div>
-<section className="cart">
+</div>
+<div className="cart">
+  <section className="inner-cart">
   <h2>Your Cart</h2>
-  <p>Your added items items will appear here</p>
-</section>
+<p>This is a carbon-neutral delivery</p>
+  </section>
+</div>
 </div>
 <div className="attribution">
     Challenge by <a href="https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/lina98st">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/lina98st">Alina</a>.
   </div>
       </main>
       </>
