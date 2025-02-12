@@ -50,6 +50,9 @@ font-size: 16px;
     margin: 0.5rem 0; /* Weniger Abstand */
 }
 
+.dessert-price {
+    color: var(--color-red); 
+}
 
 /*
 
@@ -64,10 +67,37 @@ font-size: 16px;
 */ 
 
 .dessert-category {
-    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+    color: #8d8d8d;
+    font-size: 12px;
 }
 
 .attribution {
     text-align: center;
     margin: 4rem;
 }
+
+/*Stile für den hover Button um Produkte in den Korb zu packen*/
+
+.quantity-controls {
+    display: flex; /* Items nebeneinander */
+    align-items: center; /* Vertikal zentriert */
+    justify-content: center; /* Optional: zentriert */
+    gap: 0.5rem; /* Abstand zwischen den Buttons und der Zahl */
+  }
+  
+  .quantity-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:
+  }  
+
+  .carbon-delivery {
+    border-radius: 1ch;
+    padding: 0.5rem;
+    font-size: 10px;
+  }

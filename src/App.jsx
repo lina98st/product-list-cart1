@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Index.css';
 import './App.css';
 import DessertList from './components/DessertList';
 import DessertCard from './components/DessertCard';
+import Cart from './components/Cart';
 import desserts from './data.json';
 
 
 function App() {
+  // Zustand für den Warenkorb
+  const [cartItems, setCartItems] = useState([]);
+
+  // Funktion zum Hinzufügen eines Produkts zum Warenkorb
+  const addToCart = (dessert) => {
+    setCartItems((prevCart) => {
+      const existingItem = prevCart.find((item) => item.name === dessert.name);
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.name === dessert.name ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      }
+      return [...prevCart, { ...dessert, quantity: 1 }];
+    });
+  };
+
+  // Funktion zum Entfernen eines Produkts aus dem Warenkorb
+  const removeFromCart = (index) => {
+    setCartItems((prevCart) => prevCart.filter((_, i) => i !== index));
+  };
 
   return (
 <>
@@ -30,10 +51,7 @@ function App() {
 </div>
 </div>
 <div className="cart">
-  <section className="inner-cart">
-  <h2>Your Cart</h2>
-<p>This is a carbon-neutral delivery</p>
-  </section>
+    <Cart cartItems={cartItems} onRemoveItem={removeFromCart} />
 </div>
 </div>
 <div className="attribution">
