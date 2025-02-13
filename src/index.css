@@ -97,19 +97,35 @@ left: 2rem;
   display: flex; /* Desserts und Cart nebeneinander */
   flex-direction: row;
   box-shadow: 2px 5px 5px rgb(0, 0, 0);
-  background-color: var(--color-rose-50);
+  background-color: var(--color-rose-100);
+  padding: 1rem;
 }
 
 .cart {
   margin-top: 5rem; 
-  margin-right: 3rem;
+  margin-right: 2rem;
 }
 
 .inner-cart {
-  background-color: var(--color-rose-100);
-  border-radius: 2rem;
-  padding: 2rem;
+  background-color: var(--color-rose-50);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  width: auto; 
+  max-width: 90%; 
+  margin: 0 auto;
 }
+
+.inner-cart h2 {
+  font-size: 16px;
+  color: var(--color-red); 
+}
+
+.order-font {
+  font-size: 11px;
+  color: black;
+  margin-right: 2rem;
+}
+
 
 /* Media Queries für responsives Verhalten */
 @media (max-width: 768px) {

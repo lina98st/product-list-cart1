@@ -41,12 +41,13 @@ function App() {
 <div className="dessert-list">
   {desserts.map((dessert, index) => (
     <DessertCard
-    key={index}
-    image={dessert.image}
-    name={dessert.name}
-    category={dessert.category}
-    price={dessert.price}
-    />
+  key={index}
+  image={dessert.image}
+  name={dessert.name}
+  category={dessert.category}
+  price={dessert.price}
+  addToCart={() => addToCart(dessert)} 
+/>
   ))}
 </div>
 </div>

@@ -11,7 +11,7 @@ const Cart = ({ cartItems, onRemoveItem }) => {
     <section className="inner-cart">
       <h2>Your Cart ({cartItems.length})</h2>
 
-      {/* 🛒 Wenn der Warenkorb leer ist, zeige das Bild */}
+      {/* Wenn der Warenkorb leer ist, zeige das Bild */}
       {cartItems.length === 0 ? (
         <div className="empty-cart">
           <img
@@ -24,34 +24,38 @@ const Cart = ({ cartItems, onRemoveItem }) => {
       ) : (
         <>
           <ul className="cart-items">
-            {cartItems.map((item, index) => (
-              <li key={index} className="cart-item">
-                <div className="cart-item-details">
-                  <span>{item.name}</span>
-                  <button className="remove-item" onClick={() => onRemoveItem(index)}> {/* ❌ Entfernen */}
-                    <img
-                      src="/assets/images/icon-remove-item.svg"
-                      alt="Remove Item"
-                      className="remove-item-icon"
-                    />
-                  </button>
-                </div>
-                <div className="cart-item-pricing">
-                  <span>{item.quantity}x @${item.price.toFixed(2)}</span>
-                  <span>${(item.quantity * item.price).toFixed(2)}</span>
-                </div>
-              </li>
-            ))}
-          </ul>
+  {cartItems.map((item, index) => (
+    <li key={index} className="cart-item">
+      <div className="cart-item-info">
+        <h3>{item.name}</h3> {/* Gerichtname */}
+        <div className="cart-item-details">
+          <span>{item.quantity}x</span> {/* Anzahl */}
+          <span>${(item.quantity * item.price).toFixed(2)}</span> {/* Gesamtpreis */}
+        </div>
+      </div>
+      <button className="remove-item" onClick={() => onRemoveItem(index)}>❌</button>
+    </li>
+  ))}
+</ul>
+
 
           <div className="cart-total">
-            <span>Order Total</span>
+            <span className="order-font">Order Total</span>
             <span>${calculateTotal()}</span>
           </div>
         </>
       )}
 
-      <p className="carbon-delivery">This is a carbon-neutral delivery</p>
+<p className="carbon-delivery">
+  <img
+    src="/assets/images/icon-carbon-neutral.svg" 
+    alt="Carbon Neutral Icon"
+    className="carbon-icon"
+  />
+  This is a carbon-neutral delivery
+</p>
+
+<button className="confirm-order">Confirm Order</button>
     </section>
   );
 };

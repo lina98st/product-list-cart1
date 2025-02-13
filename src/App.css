@@ -1,9 +1,9 @@
 .container {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    margin: 3rem;
-    padding: 3rem;
+    margin: 2rem;
+    margin-right: 0;
+    padding: 2rem;
     flex-direction: column; 
     width: 100%;
     max-width: 1440px;
@@ -11,19 +11,19 @@
 
 
 
-.dessert-list {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-gap: 0.5rem;
-align-items: flex-start;
-font-size: 16px;
-}
+  .dessert-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: flex-start;
+    font-size: 16px;
+    }
 
-.dessert-card {
-    flex: 1 1 calc(33.333% - 1rem); /* 3 pro Zeile */
-    box-sizing: border-box;
-}
+    .dessert-card {
+        flex: 1 1 calc(33.333% - 1rem); /* 3 pro Zeile */
+        box-sizing: border-box;
+    }
 
 .dessert-card img {
     display: block;
@@ -80,10 +80,10 @@ font-size: 16px;
 /*Stile für den hover Button um Produkte in den Korb zu packen*/
 
 .quantity-controls {
-    display: flex; /* Items nebeneinander */
-    align-items: center; /* Vertikal zentriert */
-    justify-content: center; /* Optional: zentriert */
-    gap: 0.5rem; /* Abstand zwischen den Buttons und der Zahl */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 0.5rem; 
   }
   
   .quantity-button {
@@ -93,11 +93,60 @@ font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width:
   }  
 
   .carbon-delivery {
     border-radius: 1ch;
     padding: 0.5rem;
     font-size: 10px;
+  }
+
+  .cart-items {
+    list-style: none; 
+    padding: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-item-info {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .cart-item h3 {
+    font-size: 14px; 
+    margin: 0;
+  }
+
+  .cart-item-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .confirm-order {
+    display: block;
+    width: 100%;
+    background-color: var(--color-red);
+    color: white;
+    border: none;
+    padding: 10px;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 1rem;
+  }
+  
+  .confirm-order:hover {
+    background-color: var(--color-red);
   }
