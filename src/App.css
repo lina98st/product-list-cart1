@@ -33,12 +33,6 @@ margin: 1rem;
       height: auto; /* Keine feste Höhe */
     }
     
-    .remove-item-icon {
-      width: 1.5rem; /* Größe anpassen */
-      height: 1.5rem;
-      max-width: 100%;
-      max-height: 100%;
-    }
     
 
 .dessert-card img {
@@ -168,3 +162,4 @@ margin: 1rem;
   .confirm-order:hover {
     background-color: var(--color-red);
   }
+
