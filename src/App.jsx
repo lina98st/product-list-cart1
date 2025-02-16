@@ -67,7 +67,7 @@ function App() {
   Coded by <a href="https://www.frontendmentor.io/profile/lina98st">Alina</a>.
 </div>
 
-      {/* Bestellbestätigung Popup */}
+      {/* Bestellbestätigung Popup */} 
       {orderConfirmed && (
         <div className="order-confirmation">
           <div className="order-content">
@@ -95,7 +95,6 @@ function App() {
               <span>${calculateTotal()}</span>
             </div>
 
-            {/* Neuer Bestell-Button */}
             <button className="new-order" onClick={startNewOrder}>
               Start New Order
             </button>

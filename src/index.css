@@ -327,6 +327,8 @@ margin: 5rem 0.5rem 0.5rem 0.5rem;
 
   .remove-item img {
     max-width: 100%;
+    width: 20px;
+    margin-left: 0.3rem;
     height: auto;
   }
 }
